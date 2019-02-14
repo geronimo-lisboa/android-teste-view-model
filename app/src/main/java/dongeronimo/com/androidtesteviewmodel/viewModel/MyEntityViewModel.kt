@@ -5,5 +5,5 @@ import androidx.lifecycle.ViewModel
 import dongeronimo.com.androidtesteviewmodel.model.MyEntity
 
 class MyEntityViewModel : ViewModel() {
-    var models: MutableLiveData<List<MyEntity>> = MutableLiveData();
+    var models: MutableLiveData<ArrayList<MyEntity>> = MutableLiveData();
 }
