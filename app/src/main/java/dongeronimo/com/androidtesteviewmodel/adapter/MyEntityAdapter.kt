@@ -38,9 +38,11 @@ class MyEntityAdapter
     override fun getItemCount(): Int {
         if(viewModel == null){
             viewModel = ViewModelProviders.of(context as FragmentActivity).get(MyEntityViewModel::class.java);
-            viewModel?.models?.observe((context as LifecycleOwner), Observer {
-                myEntities = it;
+
+            viewModel?.models!!.observe( Lifecycle, Observer {
+                myEntities=it
             })
+
         }
         return myEntities.size;
     }
